@@ -1,0 +1,231 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #112933;
+    margin: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+.container {
+    max-width: 1200px;
+    margin:  0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    background-color: #F5F7F7;
+}
+
+.dictionary-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.nav {
+    margin-top: 40px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 25px 0;
+    margin: 0 75px;
+    border-top: 1px solid rgba(17, 41, 51, 0.1);
+    border-bottom: 1px solid rgba(17, 41, 51, 0.1);
+  
+}
+
+.nav-list-item:not(:last-of-type) {
+    margin-right: 28px;
+}
+
+.nav-list-link {
+    font-size: 20px;
+    text-decoration: none;
+    color: #112933;
+    transition: opacity 0.1s;
+}
+
+.nav-list-link:not([href]) {
+    opacity: 0.3;
+}
+
+.nav-list-link:not(:not([href])):hover {
+    opacity: 0.7;
+}
+
+.nav-list-link:not(:not([href])):active {
+    opacity: 0.5;
+}
+
+
+.dictionary {
+    margin-top: 50px;
+}
+
+.dictionary-section {
+    margin-bottom: 45px;
+}
+
+.letter-key {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.term-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    column-count: 2;
+    column-gap: 40px;
+}
+
+.term-item:not(:first-of-type) {
+    margin-top: 20px;
+}
+
+.term-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.15s, text-shadow 0.15s;
+}
+
+.term-link:hover {
+    color: rebeccapurple;
+    text-shadow: 0px 0px 2px aqua;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    background-color: #F5F7F7;
+}
+
+.button-up {
+    font-size: 40px;
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    transition: opacity 0.18s;
+}
+
+.button-up:hover {
+    opacity: 0.75;
+}
+
+.button-up:active {
+    opacity: 0.55;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.modal.shown {
+    display: block;
+}
+
+.modal-popup {
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 920px;
+    padding: 55px 65px 50px 55px;;  
+    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #FFFFFF;
+}
+
+.modal-content {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.close-button {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    right: 34px;
+    top: 34px;
+    background-color: transparent;
+    border: none;
+    background-image: url("../img/close-btn.svg");
+    cursor: pointer;
+    transition: opacity 0.15s;
+}
+
+.close-button:hover {
+    opacity: 0.7;
+}
+
+.close-button:active {
+    opacity: 0.5;
+}
+
+.modal-content p {
+    line-height: 31px;
+    margin-top: 0;
+    margin-bottom: 56px;
+}
+
+.modal-content a {
+    color: rebeccapurple;
+    text-shadow: 0px 0px 1px cyan;
+    text-decoration: none;
+    transition: opacity 0.15s;
+}
+
+.modal-content a:hover {
+    opacity: 0.7;
+}
+
+.modal-content a:active {
+    opacity: 0.5;
+}
+
+.modal-content cite {
+    display: flex;
+    justify-content: flex-end;
+    font-style: normal;
+}
+
+.hidden {
+    display: none;
+}
